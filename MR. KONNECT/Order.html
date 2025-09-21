@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order - Mr.Konnect.com</title>
+  <style>
+    * {
+	  margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+	
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #dbac11;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #dbac11;
+    }
+    header p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1a1a;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #dbac11;
+    }
+	.order {
+	  max-width: 500px;
+	  margin: 40px auto;
+	  background: #dbac11;
+	  border-radius: 10px;
+	  box-shadow: 0 2px 10px black;
+	  padding: 20px;
+	}
+	.order h2 {
+	  text-align: center;
+	  color: rgb(0, 0, 0); 
+	  margin-bottom: 20px;
+	}
+	.order form {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 15px;
+	}
+	.order input, .order select, .order textarea {
+	  padding: 10px;
+	  font-size: 16px;
+	  border: 1px solid #0e0d0d;
+	  border-radius: 5px;
+	}
+	.order button {
+	  background: black;
+	  color: white; 
+	  padding: 12px;
+	  border: 1px solid #fdfdfd;
+	  border-radius: 5px;
+	  font-size: 16px;
+	  cursor: pointer;
+	}
+	.order button:hover {
+	  background: #045c0c;
+	  color: rgb(0, 0, 0); 
+	  border: 1px solid #0e0d0d;
+	}
+	footer {
+	  background: #000;
+	  color: #d4af37;
+	  text-align: center;
+	  padding: 1rem;
+	  margin-top: 2rem;
+	}
+
+	.social-icons a {
+	  color: #d4af37;
+	  margin: 0 0.5rem;
+	  font-size: 1.2rem;
+	  text-decoration: none;
+	}
+
+	.social-icons a:hover {
+	  color: white;
+	}
+  </style>
+</head>
+<body>
+  <header>
+   <h1>MR. KONNECT <i class="fas fa-wifi"></i><br/>
+    <p>Affordable. <i class="fas fa-tags"></i> Fast. <i class="fas fa-bolt"></i> Reliable. <i class="fas fa-money-bill-transfer"></i></p>
+  </h1>
+  </header>
+
+  <nav>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="About.html"><i class="fas fa-user"></i> About</a>
+    <a href="Service.html"><i class="fas fa-cogs"></i> Services</a>
+    <a href="Pricing (2).html"><i class="fas fa-tags"></i> Prices</a>
+    <a href="Contact US.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <section class="order" id="order">
+  <h2><i class="fas fa-shopping-cart"></i> Order Now</h2>
+  <form onsubmit="return sendToWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="tel" id="number" placeholder="Phone Number" required />
+    <select id="network" required>
+      <option value="">Select Network</option>
+      <option value="MTN">MTN</option>
+      <option value="Airtel">Airtel</option>
+      <option value="Glo">Glo</option>
+      <option value="9mobile">9mobile</option>
+    </select>
+    <select id="bundle" required>
+      <option value="">Select Data Bundle</option>
+      <option value="500MB">500MB / 7 Days</option>
+      <option value="1GB">1GB / 30 Days</option>
+      <option value="2GB">2GB / 30 Days</option>
+      <option value="5GB">5GB / 30 Days</option>
+    </select>
+    <textarea id="comments" placeholder="Extra message (optional)"></textarea>
+    <button type="submit"><i class="fas fa-cart-plus"></i> Place Order via WhatsApp</button>
+  </form>
+</section>
+  <footer>
+    &copy; 2025 Mr. Konnect | All rights reserved
+	<div class="social-icons">
+	  <a href="https://instagram.com/emirankinq"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/Biqkemih"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://facebook.com/yourprofile"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+  
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const number = document.getElementById("number").value;
+    const network = document.getElementById("network").value;
+    const bundle = document.getElementById("bundle").value;
+    const comments = document.getElementById("comments").value;
+
+    const message = `Hello Mr.Konnect, I’d like to order:\n\nName: ${name}\nPhone Number: ${number}\nNetwork: ${network}\nData Bundle: ${bundle}\n\nExtra Message: ${comments}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "2348107377513"; // 🔁 Replace with YOUR number
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    window.open(whatsappURL, "_blank");
+    return false;
+  }
+</script>
+</body>
+</html>

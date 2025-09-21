@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing - Mr. Konnect</title>
+  <style>
+  * {
+	  margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+	
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid gold;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: gold;
+    }
+    header p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1a1a;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: gold;
+    }
+	nav a.active {
+	color: gold;
+	}
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+	h2 {
+      color: #d4af37;
+      margin-bottom: 1rem;
+      margin-top: 2rem;}
+	.icon {
+		margin-right: 6px;
+		color: #d4af37;
+		font-size: 1.1em;
+		vertical-align: middle;
+	  }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+	  color: #000;
+    }
+
+    th {
+      background-color: #d4af37;
+      color: #000;
+    }
+
+    tr:hover {
+      background-color: #f0f0f0;
+    }
+
+	footer {
+	  background: #000;
+	  color: #d4af37;
+	  text-align: center;
+	  padding: 1rem;
+	  margin-top: 2rem;
+	}
+
+	.social-icons a {
+	  color: #d4af37;
+	  margin: 0 0.5rem;
+	  font-size: 1.2rem;
+	  text-decoration: none;
+	}
+
+	.social-icons a:hover {
+	  color: white;
+	}
+	    /* WhatsApp floating icon */
+    .whatsapp-float {
+      position: fixed;
+      width: 55px;
+      height: 55px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PRICES <i class="fas fa-tags"></i><br/>
+    <p>Affordable Rates for All Services <i class="fas fa-layer-group"></i></p>
+	</h1>
+  </header>
+  <nav>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="About.html"><i class="fas fa-user"></i> About</a>
+    <a href="Service.html"><i class="fas fa-cogs"></i> Services</a>
+    <a href="Pricing (2).html" class="active"><i class="fas fa-tags"></i> Prices</a>
+    <a href="Contact US.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+
+  <section>
+    <h2> <span><i class="fas fa-mobile-alt"></i> Airtime</span> & Data</h2>
+   
+    <table>
+      <tr>
+        <th>Service</th>
+        <th>Network</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+          <td><i class="fas fa-signal"></i> MTN SME Data 1GB</td>
+        <td>MTN</td>
+        <td>₦290</td>
+      </tr>
+      <tr>
+        <td>Airtel Gifting 1.5GB</td>
+        <td>Airtel</td>
+        <td>₦500</td>
+      </tr>
+      <tr>
+        <td>Glo Data 2GB</td>
+        <td>Glo</td>
+        <td>₦600</td>
+      </tr>
+      <tr>
+       <td><i class="fas fa-phone"></i> Airtime Top-up (₦1000)</td>
+        <td>All Networks</td>
+        <td>₦970</td>
+      </tr>
+    </table>
+
+    <h2><span><i class="fas fa-tv icon"></i>Cable</span> Bills & Others</h2>
+    <table>
+      <tr>
+        <th>Service</th>
+        <th>Provider</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>DSTV Padi</td>
+        <td>DSTV</td>
+        <td>₦2,500</td>
+      </tr>
+      <tr>
+        <td>NEPA Bill Payment</td>
+        <td>PHCN</td>
+        <td>As billed + ₦100</td>
+      </tr>
+      <tr>
+        <td>WAEC ePin</td>
+        <td>WAEC</td>
+        <td>₦4,000</td>
+      </tr>
+      <tr>
+        <td>JAMB ePin</td>
+        <td>JAMB</td>
+        <td>₦4,500</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    &copy; 2025 Mr. Konnect | All rights reserved
+	<div class="social-icons">
+	  <a href="https://instagram.com/emirankinq"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/Biqkemih"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://facebook.com/yourprofile"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+  
+  <!-- WhatsApp Chat Bubble -->
+  <a href="Order.html" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat" />
+  </a>
+
+</body>
+</html>
